@@ -1,0 +1,15 @@
+[auth]
+enable_anonymous_sign_ins = true
+
+[functions.pair-device]
+verify_jwt = true
+
+[functions.send-command]
+verify_jwt = true
+
+# ESP8266 requests use a per-device secret checked inside each function.
+[functions.device-data]
+verify_jwt = false
+
+[functions.device-commands]
+verify_jwt = false
